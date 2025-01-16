@@ -1,9 +1,43 @@
 ---
-import { Button } from "@/components/ui/button.tsx";
-import Layout from "@/layouts/Layout.astro";
-import "@/styles/globals.css";
+import Navbar from "@/components/Navbar"
+import Layout from "@/layouts/Layout.astro"
+import "@/styles/globals.css"
 ---
 
+<script is:inline>
+  const getThemePreference = () => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme")
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light"
+  }
+  const isDark = getThemePreference() === "dark"
+  document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+
+  if (typeof localStorage !== "undefined") {
+    const observer = new MutationObserver(() => {
+      const isDark = document.documentElement.classList.contains("dark")
+      localStorage.setItem("theme", isDark ? "dark" : "light")
+    })
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    })
+  }
+</script>
+
 <Layout>
-  <Button>Hello</Button>
+  <Navbar client:load />
+  <main>
+    <section class="flex w-full h-screen justify-center items-center">
+      <p
+        class="max-w-56 text-center text-slate-700 dark:text-slate-400"
+      >
+        Hello, I'm <strong>Alejandro</strong>, a fullstack developer from
+        Medellin
+      </p>
+    </section>
+  </main>
 </Layout>
