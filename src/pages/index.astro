@@ -1,6 +1,8 @@
 ---
 import Navbar from "@/components/Navbar"
+import ProjectSection from "@/components/ProjectSection"
 import Layout from "@/layouts/Layout.astro"
+import { HiOutlineArrowDownCircle as DownIcon } from "react-icons/hi2"
 import "@/styles/globals.css"
 ---
 
@@ -30,14 +32,19 @@ import "@/styles/globals.css"
 
 <Layout>
   <Navbar client:load />
-  <main>
-    <section class="flex w-full h-screen justify-center items-center">
+  <main class="p-4 text-slate-700 dark:text-slate-400">
+    <section class="flex flex-col w-full h-screen justify-center items-center">
       <p
-        class="max-w-56 text-center text-slate-700 dark:text-slate-400"
+        class="max-w-56 text-center"
       >
         Hello, I'm <strong>Alejandro</strong>, a fullstack developer from
         Medellin
       </p>
+      <DownIcon className="text-2xl animate-bounce mt-10" />
+    </section>
+    <section class="flex flex-col w-full justify-center items-center gap-28">
+      <h2 class="font-bold">Projects</h2>
+      <ProjectSection client:load />
     </section>
   </main>
 </Layout>
