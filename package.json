@@ -19,6 +19,7 @@
     "astro": "^5.1.7",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "locomotive-scroll": "^4.1.4",
     "lucide-react": "^0.471.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -28,6 +29,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/locomotive-scroll": "^4.1.4",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1"
   }

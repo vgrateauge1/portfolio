@@ -20,21 +20,25 @@ const ProjectCard = ( {image, title,description, tags, links}: ProjectCardProps)
     const projectRef = useRef(null)
 
     useEffect(() => {
+        let hasAnimated = false;
+
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (entry.isIntersecting) {
+              if (entry.isIntersecting && !hasAnimated) {
                 entry.target.classList.add('animate-fade-in-up');
                 entry.target.classList.remove('opacity-0');
                 entry.target.classList.remove('animate-fade-out-down');
-              }else {
+                hasAnimated = true;
+              }else if (!entry.isIntersecting && hasAnimated){
                 entry.target.classList.remove('animate-fade-in-up');
                 entry.target.classList.add('animate-fade-out-down');
                 entry.target.classList.add('opacity-0');
+                hasAnimated = false;
               }
             });
           },
-          { threshold: 0.5 }
+          { threshold: 0.4 }
         );
     
         if (projectRef.current) {

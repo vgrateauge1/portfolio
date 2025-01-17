@@ -5,6 +5,7 @@ import PostsSection from "@/components/PostsSection"
 import Timeline from "@/components/Timeline"
 import Avatar from "@/components/Avatar"
 import Layout from "@/layouts/Layout.astro"
+import SmoothScroll from "@/components/SmoothScroll"
 import { HiOutlineArrowDownCircle as DownIcon } from "react-icons/hi2"
 import "@/styles/globals.css"
 ---
@@ -34,6 +35,7 @@ import "@/styles/globals.css"
 </script>
 
 <Layout>
+  <SmoothScroll client:only>
   <Navbar client:load />
   <main class="p-4 text-slate-700 dark:text-slate-400">
     <section class="flex flex-col w-full h-screen justify-center items-center">
@@ -71,4 +73,5 @@ import "@/styles/globals.css"
       Made with &#x2665; by Alejandro Londoño | @slydragonn
     </p>
   </footer>
+  </SmoothScroll>
 </Layout>

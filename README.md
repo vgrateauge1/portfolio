@@ -7,3 +7,4 @@
 - react-icons
 - shadcn/ui
 - prettier
+- locomotive-scroll
