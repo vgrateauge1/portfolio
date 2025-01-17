@@ -55,7 +55,7 @@ const ProjectCard = ( {image, title,description, tags, links}: ProjectCardProps)
             <div className="flex flex-col justify-between gap-4">
                 <h3 className="font-bold text-2xl">{title}</h3>
                 <div className="flex gap-4">
-                {tags.map((tag, index) => ( <Badge key={index}>{tag}</Badge>))}
+                {tags.map((tag, index) => ( <Badge key={index} className="bg-slate-800 text-slate-200 dark:text-slate-800 dark:bg-slate-200">{tag}</Badge>))}
                 </div>
                 <p className="max-w-[800px] text-lg">{description}</p>
                 <div className="flex gap-4">

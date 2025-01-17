@@ -22,7 +22,7 @@ const PostCard = ({ title, description, date, tags, url }: PostCardProps) => {
     return (
         <Card className="w-full">
             <CardHeader>
-                <CardTitle><a href={url} target="_blank" rel="noreferrer">{title}</a></CardTitle>
+                <CardTitle><a href={url} target="_blank" rel="noreferrer" className="text-slate-700 dark:text-slate-400">{title}</a></CardTitle>
             </CardHeader>
             <CardContent>
                 <CardDescription>{description}</CardDescription>
@@ -30,9 +30,9 @@ const PostCard = ({ title, description, date, tags, url }: PostCardProps) => {
             <CardFooter>
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">{date}</Badge>
+                    <Badge variant="outline" className="text-slate-700 dark:text-slate-400">{date}</Badge>
                     {tags.map((tag) => (
-                        <Badge key={tag} variant="outline">{tag}</Badge>
+                        <Badge key={tag} variant="outline" className="text-slate-700 dark:text-slate-400">{tag}</Badge>
                     ))}
                     </div>
                     <a href={url} target="_blank" rel="noreferrer">
