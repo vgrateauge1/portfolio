@@ -26,6 +26,11 @@ const ProjectCard = ( {image, title,description, tags, links}: ProjectCardProps)
               if (entry.isIntersecting) {
                 entry.target.classList.add('animate-fade-in-up');
                 entry.target.classList.remove('opacity-0');
+                entry.target.classList.remove('animate-fade-out-down');
+              }else {
+                entry.target.classList.remove('animate-fade-in-up');
+                entry.target.classList.add('animate-fade-out-down');
+                entry.target.classList.add('opacity-0');
               }
             });
           },
