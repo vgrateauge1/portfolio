@@ -1,4 +1,5 @@
 ---
+import Navbar from "@/components/Navbar"
 import SmoothScroll from "@/components/SmoothScroll"
 ---
 
@@ -12,6 +13,7 @@ import SmoothScroll from "@/components/SmoothScroll"
     <title>Alejandro's Portfolio</title>
   </head>
   <body>
+    <Navbar client:load/>
     <SmoothScroll client:only>
       <slot />
     </SmoothScroll>
