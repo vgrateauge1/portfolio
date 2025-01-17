@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Badge } from "./ui/badge"
 import { Button } from "./ui/button"
 
@@ -18,27 +18,31 @@ interface ProjectCardProps {
 
 const ProjectCard = ( {image, title,description, tags, links}: ProjectCardProps) => {
     const projectRef = useRef(null)
+    const [threshold, setThreshold] = useState(0.5)
 
     useEffect(() => {
-        let hasAnimated = false;
 
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (entry.isIntersecting && !hasAnimated) {
+              if (entry.isIntersecting) {
                 entry.target.classList.add('animate-fade-in-up');
                 entry.target.classList.remove('opacity-0');
                 entry.target.classList.remove('animate-fade-out-down');
-                hasAnimated = true;
-              }else if (!entry.isIntersecting && hasAnimated){
+                setThreshold(0.3);
+              }else {
                 entry.target.classList.remove('animate-fade-in-up');
                 entry.target.classList.add('animate-fade-out-down');
                 entry.target.classList.add('opacity-0');
-                hasAnimated = false;
+               
+                setThreshold(0.5);
               }
             });
           },
-          { threshold: 0.4 }
+          { 
+            threshold: threshold,
+            rootMargin: '0px'
+           }
         );
     
         if (projectRef.current) {
@@ -50,7 +54,7 @@ const ProjectCard = ( {image, title,description, tags, links}: ProjectCardProps)
             observer.unobserve(projectRef.current);
           }
         };
-      }, [])
+      }, [threshold])
 
 
     return (

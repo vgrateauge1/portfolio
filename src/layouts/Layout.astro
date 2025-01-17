@@ -1,3 +1,7 @@
+---
+import SmoothScroll from "@/components/SmoothScroll"
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,7 +12,9 @@
     <title>Alejandro's Portfolio</title>
   </head>
   <body>
-    <slot />
+    <SmoothScroll client:only>
+      <slot />
+    </SmoothScroll>
   </body>
 </html>
 
