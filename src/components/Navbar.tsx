@@ -31,7 +31,7 @@ const Navbar = () => {
       <ul className="flex items-center justify-center gap-8 text-slate-700 dark:text-slate-300 text-xl">
         {socials.map((social, index) => (
           <li key={index} className="hover:scale-90 duration-150">
-            <a href={social.url}>
+            <a href={social.url} target="_blank" rel="noreferrer">
               <social.icon />
             </a>
           </li>
