@@ -1,6 +1,7 @@
 ---
 import Navbar from "@/components/Navbar"
 import ProjectSection from "@/components/ProjectSection"
+import PostsSection from "@/components/PostsSection"
 import Layout from "@/layouts/Layout.astro"
 import { HiOutlineArrowDownCircle as DownIcon } from "react-icons/hi2"
 import "@/styles/globals.css"
@@ -45,6 +46,10 @@ import "@/styles/globals.css"
     <section class="flex flex-col w-full justify-center items-center gap-28">
       <h2 class="font-bold">Projects</h2>
       <ProjectSection client:load />
+    </section>
+    <section class="flex flex-col w-full justify-center items-center gap-28 mt-56">
+      <h2 class="font-bold">Posts</h2>
+      <PostsSection client:load />
     </section>
   </main>
 </Layout>
