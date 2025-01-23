@@ -3,11 +3,18 @@ import { PiLinkSimpleBold } from "react-icons/pi"
 
 export const PROJECTS = [
   {
-    title: "Neovim Setup",
+    title: "Neovim Setups",
     description:
       "Neovim is a hyper-extensible text editor based on Vim, and it is a fast editor compared to its counterparts like vscode, but it has a steep learning curve especially in terms of how to configure it, which I have made a bit easier for new developers who want to use neovim by creating and sharing my own configuration.",
     image: "/neovim.jpg",
-    tags: ["Lua", "Vimscript", "lazy.nvim", "packer.nvim"],
+    tags: [
+      "+130 Stars",
+      "30 Forks",
+      "Lua",
+      "Vimscript",
+      "lazy.nvim",
+      "packer.nvim",
+    ],
     links: [
       {
         name: "Lazy",
@@ -53,21 +60,20 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "Minimalist Portfolio",
-    description:
-      "minimalist-dragon is a free to use template for the Astro Themes repository.",
-    image: "/minimalist-dragon.jpg",
-    tags: ["Astro", "TypeScript"],
+    title: "My Portfolio templates",
+    description: "Free to use templates for the Astro Themes repository.",
+    image: "/portfolios.png",
+    tags: ["Astro", "TypeScript", "React", "Tailwind CSS"],
     links: [
       {
-        name: "Astro Themes",
+        name: "minimalist-dragon",
         url: "https://astro.build/themes/details/minimalist-dragon/",
         icon: PiLinkSimpleBold,
       },
       {
-        name: "Github",
-        url: "https://github.com/slydragonn/minimalist-dragon",
-        icon: FaGithub,
+        name: "alogocode",
+        url: "https://astro.build/themes/details/alogocode/",
+        icon: PiLinkSimpleBold,
       },
     ],
   },
