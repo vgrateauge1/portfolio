@@ -62,15 +62,15 @@ const ProjectCard = ({
   }, [threshold])
 
   return (
-    <article className="flex flex-col gap-8 opacity-0" ref={projectRef}>
+    <article className="flex flex-col gap-8 w-full opacity-0" ref={projectRef}>
       <img
         src={image}
         alt={title}
-        className="w-[800px] rounded-3xl border border-slate-200 dark:border-slate-700"
+        className="md:w-[800px] w-full rounded-3xl border border-slate-200 dark:border-slate-700"
       />
       <div className="flex flex-col justify-between gap-4">
         <h3 className="font-bold text-2xl">{title}</h3>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           {tags.map((tag, index) => (
             <Badge
               key={index}
@@ -81,7 +81,7 @@ const ProjectCard = ({
           ))}
         </div>
         <p className="max-w-[800px] text-lg">{description}</p>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           {links.map((link, index) => (
             <a key={index} href={link.url} target="_blank" rel="noreferrer">
               <Button variant="secondary">
