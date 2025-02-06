@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type PropsWithChildren } from "react"
 import { IoBugSharp } from "react-icons/io5"
 import LocomotiveScroll from "locomotive-scroll"
 import "locomotive-scroll/dist/locomotive-scroll.css"
+import Navbar from "./Navbar"
 
 const SmoothScroll = ({ children }: PropsWithChildren) => {
   const scrollRef = useRef(null)
@@ -44,6 +45,7 @@ const SmoothScroll = ({ children }: PropsWithChildren) => {
       )}
 
       {/* Main content */}
+      <Navbar />
       <div data-scroll-container ref={scrollRef}>
         {children}
       </div>
