@@ -1,26 +1,21 @@
-import { FaDev, FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaDev, FaGithub, FaLinkedin, FaMedium } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
 import { ModeToggle } from "./ModeToggle"
 
 const socials = [
   {
     name: "Github",
-    url: "https://github.com/slydragonn",
+    url: "https://github.com/vgrateauge1",
     icon: FaGithub,
   },
   {
-    name: "DEV",
-    url: "https://dev.to/slydragonn",
-    icon: FaDev,
-  },
-  {
-    name: "Twitter",
-    url: "https://x.com/alejo_log",
-    icon: FaXTwitter,
+    name: "Medium",
+    url: "https://medium.com/@valentin.grateau1309",
+    icon: FaMedium,
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/alejolg/",
+    url: "https://www.linkedin.com/in/valentingrateau/",
     icon: FaLinkedin,
   },
 ]

@@ -1,80 +1,68 @@
-import { FaGithub } from "react-icons/fa"
-import { PiLinkSimpleBold } from "react-icons/pi"
+import { FaGithub, FaMedium } from "react-icons/fa";
+import { PiLinkSimpleBold } from "react-icons/pi";
 
 export const PROJECTS = [
   {
-    title: "Neovim Setups",
+    title: "Fine-tuning of Llama3 for Domain-Specific Use Case",
     description:
-      "Neovim is a hyper-extensible text editor based on Vim, and it is a fast editor compared to its counterparts like vscode, but it has a steep learning curve especially in terms of how to configure it, which I have made a bit easier for new developers who want to use neovim by creating and sharing my own configuration.",
-    image: "/neovim.jpg",
-    tags: [
-      "+130 Stars",
-      "30 Forks",
-      "Lua",
-      "Vimscript",
-      "lazy.nvim",
-      "packer.nvim",
+      "Fine-tuned Llama3 to improve knowledge quality in a specific field. Tested the model on various use-cases to identify shortcomings and compared RAG and fine-tuning to determine best practices. Results will be published on Medium.",
+    image: "/llama3.png", // Update with actual image path
+    tags: ["Llama3", "Fine-tuning", "RAG", "Python"],
+    links: [
+      // {
+      //   name: "Medium Article",
+      //   url: "https://medium.com/@yourprofile/llama3-fine-tuning", // Update with actual URL
+      //   icon: FaMedium,
+      // },
+     
     ],
+  },
+  {
+    title: "LLava vs GPT-4 Comparison",
+    description:
+      "Engineered prompts to obtain formatted answers and integrated model comparisons into a Flask app using LangChain. Published results on Medium.",
+    image: "/llava.png", // Update with actual image path
+    tags: ["LangChain", "Flask",  "Python", "LLava", "GPT-4"],
     links: [
       {
-        name: "Lazy",
-        url: "https://github.com/slydragonn/nvim-lazy",
-        icon: FaGithub,
+        name: "Medium Article",
+        url: "https://medium.com/@valentin.grateau1309/llava-next-vs-gpt-4-and-some-wonderful-use-cases-83c3929bac0a", // Update with actual URL
+        icon: FaMedium,
       },
       {
-        name: "Packer",
-        url: "https://github.com/slydragonn/dotfiles",
+        name: "GitHub Repository",
+        url: "https://github.com/vgrateauge1/llava",
+        icon: FaGithub,
+      }
+    ],
+  },
+  {
+    title: "Mine Clearance Project",
+    description:
+      "A project dedicated to developing technology and methodologies for mine clearance. This initiative aims to enhance safety and efficiency in demining operations.",
+    image: "/landmine-detection.jpeg", // Update with actual image path
+    tags: ["Vision", "CNN", "YOLO", "Python"],
+    links: [
+      {
+        name: "GitHub Repository",
+        url: "https://github.com/mine-clearance/mine-clearance",
         icon: FaGithub,
       },
     ],
   },
   {
-    title: "Markdown Web Editor",
-    description: "A Simple and Straightforward Markdown Web Editor",
-    image: "/markwriter.jpg",
-    tags: ["React", "Next.js", "Codemirror", "ChakraUI"],
+    title: "Duck Hunt GUI Project",
+    description:
+      "A project focused on developing a graphical user interface for the Duck Hunt game. This project involves creating an intuitive and engaging interface for players.",
+    image: "/duck-hunt.jpg", // Update with actual image path
+    tags: ["C++", "Qt", "MultiThreading", "GUI"],
     links: [
       {
-        name: "Preview",
-        url: "https://markwriter.vercel.app/",
-        icon: PiLinkSimpleBold,
-      },
-      {
-        name: "Github",
-        url: "https://github.com/slydragonn/markwriter",
+        name: "GitHub Repository",
+        url: "https://github.com/vgrateauge1/projet-duck-hunt-partie-gui-duck-hunters",
         icon: FaGithub,
       },
     ],
   },
-  {
-    title: "Landing Page",
-    description: "Landing page for entrepreneurship competition",
-    image: "/blueriver.jpg",
-    tags: ["JavaScript", "Next.js"],
-    links: [
-      {
-        name: "Preview",
-        url: "https://blue-river.vercel.app/",
-        icon: PiLinkSimpleBold,
-      },
-    ],
-  },
-  {
-    title: "My Portfolio templates",
-    description: "Free to use templates for the Astro Themes repository.",
-    image: "/portfolios.png",
-    tags: ["Astro", "TypeScript", "React", "Tailwind CSS"],
-    links: [
-      {
-        name: "minimalist-dragon",
-        url: "https://astro.build/themes/details/minimalist-dragon/",
-        icon: PiLinkSimpleBold,
-      },
-      {
-        name: "alogocode",
-        url: "https://astro.build/themes/details/alogocode/",
-        icon: PiLinkSimpleBold,
-      },
-    ],
-  },
-]
+  
+];
