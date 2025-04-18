@@ -1,5 +1,5 @@
-import { FaDev, FaGithub, FaLinkedin, FaMedium } from "react-icons/fa"
-import { FaXTwitter } from "react-icons/fa6"
+import { FaCamera, FaDev, FaGithub, FaLinkedin, FaMedium, FaPhotoVideo } from "react-icons/fa"
+import { FaPhotoFilm, FaXTwitter } from "react-icons/fa6"
 import { ModeToggle } from "./ModeToggle"
 
 const socials = [
@@ -12,6 +12,11 @@ const socials = [
     name: "Medium",
     url: "https://medium.com/@valentin.grateau1309",
     icon: FaMedium,
+  },
+  {
+    name: "Photo portfolio",
+    url: "https://valentingrateau.myportfolio.com/",
+    icon: FaCamera,
   },
   {
     name: "LinkedIn",
