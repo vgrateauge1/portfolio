@@ -7,11 +7,6 @@ import tailwind from "@astrojs/tailwind"
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://vgrateauge1.github.io",
-  base: "/portfolio/",
-  output: "static",
-  build: {
-    assetsPrefix: "/portfolio/",
-  },
+  site: "https://www.valentingrateau.com",
   integrations: [react(), tailwind({ applyBaseStyles: false })],
 })
