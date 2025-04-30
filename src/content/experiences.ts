@@ -3,6 +3,8 @@ export const EXPERIENCES = [
     date: "March 2025 - Present",
     jobTitle: "AI Research Internship in Medical Imaging",
     company: "Barco Healthcare",
+    url: "https://www.barco.com/en/healthcare",
+    logo: " /public/barcologo.png",
     location: "Kortrijk, Belgium",
     description: [
       "Integrated AI into medical tools to enhance real-time insights for doctors in operating rooms.",
@@ -16,6 +18,8 @@ export const EXPERIENCES = [
     date: "September 2022 - Present",
     jobTitle: "Deep Learning and Computer Vision Engineer Apprenticeship",
     company: "MBDA - Airbus",
+    url: "https://www.mbda-systems.com/",
+    logo:" /public/mbdalogo.png",
     location: "Plessis-Robinson, France",
     description: [
       "Engineered and optimized a vision processing algorithm in C++ with multithreading on Raspberry Pi to significantly enhance processing efficiency.",
@@ -28,6 +32,8 @@ export const EXPERIENCES = [
   {
     date: "September 2024 - January 2025",
     jobTitle: "Software Engineer Volunteer",
+    url:"https://www.getout.sport/fr/",
+    logo:"/public/getoutlogo.png",
     company: "GetOut",
     location: "Chicago, Illinois",
     description: [
@@ -41,6 +47,8 @@ export const EXPERIENCES = [
     date: "April 2022 - July 2022",
     jobTitle: "Neural Network Research Internship",
     company: "PIMM Laboratory - CNRS/CNAM",
+    url: "https://pimm.artsetmetiers.fr/",
+    logo: "/public/pimmlogo.jpeg",
     location: "Paris, France",
     description: [
       "Trained LSTM networks to predict wind and drag vector on autonomous drone in Singapore (Python, TensorFlow).",
