@@ -1,5 +1,5 @@
-import { EXPERIENCES } from "@/content/experiences"
 import { Button } from "./ui/button"
+import { EXPERIENCES } from "@/content/experiences"
 
 const Timeline = () => {
   return (
@@ -28,7 +28,11 @@ const Timeline = () => {
                   <Button variant="secondary">{experience.company}</Button>
                 </a>
               </h4>
-              <p className="text-gray-600 mt-2">{experience.description}</p>
+              <ul className="text-gray-600 mt-2 list-disc list-inside">
+                {experience.description.map((item: string, idx: number) => (
+                  <li key={idx}>{item.replace(/^- /, "")}</li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}
