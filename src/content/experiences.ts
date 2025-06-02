@@ -33,7 +33,7 @@ export const EXPERIENCES = [
     date: "September 2024 - January 2025",
     jobTitle: "Software Engineer Volunteer",
     url:"https://www.getout.sport/fr/",
-    logo:"/public/getoutlogo.png",
+    logo:"/public/getoutlogo.jpeg",
     company: "GetOut",
     location: "Chicago, Illinois",
     description: [
